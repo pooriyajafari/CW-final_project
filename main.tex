@@ -23,16 +23,39 @@
 
 \section{Exploration Tasks}
 \subsection{Vim Advanced Features}
+\begin{enumerate}
+    \item Regular Expressions and Search Patterns\\
+    Vim supports powerful regular expressions for search and replace operations. You can create complex search patterns to find and manipulate text efficiently.
 
+    \item Registers and Shell Integration\\
+    Vim's registers not only store yanked or deleted text but also allow you to interact with the system shell. You can execute shell commands from within Vim, capture their output, and even paste the output directly into your document.
+
+    \item Autocompletion and IntelliSense\\
+    Vim supports autocompletion for code, making coding faster and more accurate. Plugins like YouCompleteMe or coc.nvim provide IntelliSense-like features, offering suggestions for code completion, function signatures, and documentation as you type.
+\end{enumerate}
 \subsection{Memory profiling}
+
 \subsubsection{Memory Leak}
+When we store more information than the capacity allocated to the memory
 \subsubsection{Memory profilers}
+Valgrind is a tool for finding memory-related errors in programs. It helps identify issues like memory leaks. One of its tools, Memcheck, is commonly used for detecting memory leaks by tracking memory allocations and deallocations during program execution. Developers run Valgrind to analyze their programs and get detailed reports on memory-related problems.
 \subsection{GNU/Linux Bash Scripting}
 \subsubsection{fzf}
-\subsubsection{Using fzf to find your favorite PDF}
-\subsubsection{Opening the file using Zathura}
+\begin{enumerate}
+    \item Fuzzy searching finds approximate matches for a query, accommodating slight errors or variations in the input data. It's useful for applications like spell checking and search engines.
 
+    \item The command `ls | fzf` uses the `ls` command to list files in a directory and pipes the output to `fzf` for interactive fuzzy searching and selection.
+\subsubsection{Using fzf to find your favorite PDF}
+\begin{verbatim}
+fd -e pdf
+fd -e pdf | fzf
+\end{verbatim}
+\subsubsection{Opening the file using Zathura}
+\begin{verbatim}
+zathura "$(fd -e pdf | fzf)"
+\end{verbatim}
 \section{Git and FOSS}
+
 \subsection{README.md}
 \subsection{Issues}
 \end{document}
