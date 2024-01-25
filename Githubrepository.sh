@@ -1,1 +1,0 @@
-xdg-open https://github.com/pooriyajafari/CW-final_project.git
